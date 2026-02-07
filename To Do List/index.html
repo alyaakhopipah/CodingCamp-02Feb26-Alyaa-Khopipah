@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+     
+   <header>
+      <h1>To Do List</h1>
+   </header>
+
+   <div class="center-wrapper">
+
+     <main class="container">
+        
+         <section>
+            <form>
+            <label>Your List</label>
+            <input type="text" id="ToDo-Input" placeholder="Enter To-Do List"><br>
+            
+            <label>Created Date</label>
+            <input type="date" id="ToDo-CreatedDate"><br>
+            
+            <label>Deadline</label>
+            <input type="datetime-local" id="ToDo-Deadline"><br>
+            
+            <label>Priority</label> 
+            <select id="ToDo-Priority">
+               <option value="High Priority">High Priority</option>
+               <option value="Medium Priority">Medium Priority</option>
+               <option value="Low Priority">Low Priority</option>
+            </select><br>
+            
+            <label>Status</label>
+            <select id="ToDo-Status">
+               <option value="To-Do">To-Do</option>
+               <option value="In Progress">In Progress</option>
+               <option value="Done">Done</option>
+            </select><br>
+
+            <button type="button" onclick="addToDo()">Add To-Do</button>
+         </form>
+
+         <section class="actions">
+            <button id="clearBtn">Clear To-Do</button>
+
+            <select id="filterStatus">
+               <option value="All">All Status</option>
+               <option value="High Priority">High Priority</option>
+               <option value="Medium Priority">Medium Priority</option>
+               <option value="Low Priority">Low Priority</option>
+            </select>
+            <button id="filterBtn" onclick="filterToDo()">Filter</button>
+         </section>
+
+         <section>
+            <ul>
+               <li>Your to-do list is empty</li>
+            </ul>
+            
+            <table id "YourToDoList" border="1" style="display: none; width: 100%; margin-top: 20px;">
+               <thead>
+                  <tr>
+                     <th>To Do List</th>
+                     <th>Created Date</th>
+                     <th>Deadline</th>
+                     <th>Priority</th>
+                     <th>Status</th>
+                  </tr>
+               </thead>
+               <tbody id="ToDo-Table-Body">
+                  </tbody>
+            </table>
+         </section>
+     </main>
+   </div>
+
+   <footer>
+      <p class="pt-2" id="ToDo-List">&copy;2026 Alyaa's To-Do App</p>
+   </footer>
+
+
+<script src="js\script.js"></script></body>
+</html>
